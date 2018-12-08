@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1B783120D75357006552C9 /* DataGrabbingFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B782F20D75357006552C9 /* DataGrabbingFunctions.cpp */; };
+		5E320B8621928D1000EFA497 /* DataWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E320B8421928D1000EFA497 /* DataWriter.cpp */; };
+		5E7331A920CBFFAC000D324A /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E7331A720CBFFAC000D324A /* Account.cpp */; };
+		5EA12F1F20D4B21600AEC298 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA12F1D20D4B21600AEC298 /* Date.cpp */; };
+		5EA12F2220D55ECF00AEC298 /* DataGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EA12F2020D55ECF00AEC298 /* DataGrabber.cpp */; };
 		5EF268FF20CA0E6E0075B3D7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EF268FE20CA0E6E0075B3D7 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E1B782F20D75357006552C9 /* DataGrabbingFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataGrabbingFunctions.cpp; sourceTree = "<group>"; };
+		5E1B783020D75357006552C9 /* DataGrabbingFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataGrabbingFunctions.hpp; sourceTree = "<group>"; };
+		5E320B8421928D1000EFA497 /* DataWriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataWriter.cpp; sourceTree = "<group>"; };
+		5E320B8521928D1000EFA497 /* DataWriter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataWriter.hpp; sourceTree = "<group>"; };
+		5E7331A720CBFFAC000D324A /* Account.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
+		5E7331A820CBFFAC000D324A /* Account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Account.hpp; sourceTree = "<group>"; };
+		5EA12F1D20D4B21600AEC298 /* Date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
+		5EA12F1E20D4B21600AEC298 /* Date.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Date.hpp; sourceTree = "<group>"; };
+		5EA12F2020D55ECF00AEC298 /* DataGrabber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataGrabber.cpp; sourceTree = "<group>"; };
+		5EA12F2120D55ECF00AEC298 /* DataGrabber.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataGrabber.hpp; sourceTree = "<group>"; };
 		5EF268FB20CA0E6E0075B3D7 /* XcodeC++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "XcodeC++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF268FE20CA0E6E0075B3D7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				5EF268FE20CA0E6E0075B3D7 /* main.cpp */,
+				5E7331A720CBFFAC000D324A /* Account.cpp */,
+				5E7331A820CBFFAC000D324A /* Account.hpp */,
+				5EA12F1D20D4B21600AEC298 /* Date.cpp */,
+				5EA12F1E20D4B21600AEC298 /* Date.hpp */,
+				5EA12F2020D55ECF00AEC298 /* DataGrabber.cpp */,
+				5EA12F2120D55ECF00AEC298 /* DataGrabber.hpp */,
+				5E1B782F20D75357006552C9 /* DataGrabbingFunctions.cpp */,
+				5E1B783020D75357006552C9 /* DataGrabbingFunctions.hpp */,
+				5E320B8421928D1000EFA497 /* DataWriter.cpp */,
+				5E320B8521928D1000EFA497 /* DataWriter.hpp */,
 			);
 			path = "XcodeC++";
 			sourceTree = "<group>";
@@ -118,7 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA12F1F20D4B21600AEC298 /* Date.cpp in Sources */,
 				5EF268FF20CA0E6E0075B3D7 /* main.cpp in Sources */,
+				5E7331A920CBFFAC000D324A /* Account.cpp in Sources */,
+				5EA12F2220D55ECF00AEC298 /* DataGrabber.cpp in Sources */,
+				5E320B8621928D1000EFA497 /* DataWriter.cpp in Sources */,
+				5E1B783120D75357006552C9 /* DataGrabbingFunctions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

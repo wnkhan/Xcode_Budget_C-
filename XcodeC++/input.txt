@@ -1,0 +1,2 @@
+#include SOME_STRING ChannelNumber(1) //what in the world
+#define SOME_OTHER_STRING ChannelNumber(2)
