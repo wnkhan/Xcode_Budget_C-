@@ -10,11 +10,10 @@
 
 std::string ExtractDateString(std::string raw_data)
 {
-    size_t startIndex = raw_data.find(",,");
-    size_t endIndex = raw_data.find(",,",startIndex+2);
-    size_t diff = endIndex - startIndex;
-    std::string date = raw_data.substr(startIndex+2,diff-2);
-    return date;
+    std::regex date("\\d\\d(/)\\d\\d(/)\\d\\d\\d\\d");
+    std::smatch Date;
+    regex_search(raw_data,Date,date);
+    return Date.str();
 }
 
 std::string ExtractDescription(std::string raw_data)
@@ -23,8 +22,8 @@ std::string ExtractDescription(std::string raw_data)
     size_t startIndex = raw_data.find(",,",firstIndex+2);
     size_t endIndex = raw_data.find(",",startIndex+2);
     size_t diff = endIndex - startIndex;
-    std::string date = raw_data.substr(startIndex+2,diff-2);
-    return date;
+    std::string description = raw_data.substr(startIndex+2,diff-2);
+    return description;
 }
 
 std::string ExtractCategory(std::string raw_data)
@@ -40,19 +39,24 @@ std::string ExtractCategory(std::string raw_data)
 
 float ExtractAmount(std::string raw_data)
 {
-    size_t first = raw_data.find(",,");
-    size_t second = raw_data.find(",,",first+2);
-    size_t startIndex = raw_data.find(",", second+2);
-    size_t endIndex = raw_data.find(",",startIndex+1);
-    std::string amount = raw_data.substr(endIndex+1);
+    std::regex amount("-(//d|.)+");
+    std::smatch Amount;
+    regex_search(raw_data,Amount,amount);
+    std::string string_copy = Amount.str();
     
-    size_t hyphenPos;
-    hyphenPos = amount.find("--");
-    if (hyphenPos!=std::string::npos) {
-        amount.erase(hyphenPos,2);
+    std::regex positive("[^--](//d |.)+");
+    std::smatch Modified;
+    std::string amount_str = regex_search(string_copy,Modified,positive) ? Modified.str() : Amount.str();
+    
+    try{
+        stof(amount_str);
     }
-    
-    return stof(amount);
+    catch(const std::invalid_argument &ia){
+        std::cerr  << "Inavlid Argument " << ia.what() << " " << amount_str << std::endl;
+        return 0.0;
+    }
+    std::cout << amount_str << std::endl;
+    return stof(amount_str);
 }
 
 void ExtractIntgerValuesForDate(std::string date, std::vector<int> &date_ints)

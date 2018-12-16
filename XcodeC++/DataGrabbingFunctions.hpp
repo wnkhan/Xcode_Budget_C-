@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include <vector>
+#include <regex>
 #include "Account.hpp"
 
 std::string ExtractDateString(std::string);
